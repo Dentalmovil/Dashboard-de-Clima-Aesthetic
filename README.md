@@ -5,11 +5,9 @@
 Una aplicación web moderna y minimalista que permite consultar el estado del tiempo en cualquier ciudad del mundo en tiempo real. El proyecto consume datos de una API externa para mostrar temperatura, humedad y condiciones atmosféricas.
 
 ## 🛠️ Tecnologías utilizadas
-* **Lenguaje:** Python / JavaScript / Java
-* **Framework:** React / Django / Spring Boot
-* **Base de Datos:** PostgreSQL / MongoDB
-* **Otras:** Docker, AWS, Tailwind CSS
-
+​Frontend: HTML5, CSS3, JavaScript (ES6+)
+​API: OpenWeatherMap API (o la que uses)
+​Estilos: CSS puro / Tailwind CSS
 ## ✨ Características principales
 * ✅ Característica 1: Descripción rápida.
 * ✅ Característica 2: Descripción rápida.
