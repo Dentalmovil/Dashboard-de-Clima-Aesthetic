@@ -17,3 +17,5 @@ npm install lucide-react
 *​📱 Responsive Design: Optimizado para dispositivos móviles y escritorio.
 
 http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=61eb4276c68253f71847f445b5efab7c
+
+http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}
