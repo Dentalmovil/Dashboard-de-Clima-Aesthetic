@@ -1,2 +1,8 @@
 # Dashboard-de-Clima-Aesthetic
  Manejo de datos asíncronos reales y renderizado condicional de estilos (si llueve, fondo gris; si hay sol, fondo naranja
+git init
+git add .
+git commit -m "Mi primer commit"
+git branch -M main
+git remote add origin https://github.com/tu-usuario/tu-proyecto.git
+git push -u origin main
