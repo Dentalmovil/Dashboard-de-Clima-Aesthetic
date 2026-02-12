@@ -25,4 +25,5 @@ Manejo de datos asíncronos reales.
    ```bash
    git clone [https://github.com/tu-usuario/nombre-del-repo.git](https://github.com/tu-usuario/nombre-del-repo.git)
 npm install  # O el comando que corresponda a tu lenguaje
+npm start
 
