@@ -15,5 +15,4 @@ Una aplicación web moderna y minimalista que permite consultar el estado del ti
 
 *​📱 Responsive Design: Optimizado para dispositivos móviles y escritorio.
 
-npm install lucide-react
 
