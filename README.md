@@ -8,8 +8,11 @@ Una aplicación web moderna y minimalista que permite consultar el estado del ti
 ​Estilos: CSS puro / Tailwind CSS
 ## ✨ Características principales
 *🔍 Búsqueda por ciudad: Obtén datos precisos de cualquier parte del mundo.
+
 *​🌡️ Datos en tiempo real: Temperatura (actual, máxima y mínima), sensación térmica y humedad.
+
 *​🖼️ Iconos dinámicos: Los iconos cambian según el estado del cielo (soleado, nublado, lluvia, etc.).
+
 *​📱 Responsive Design: Optimizado para dispositivos móviles y escritorio.
 
 ## 📸 Demo (Opcional)
