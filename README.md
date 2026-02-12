@@ -14,5 +14,6 @@ Una aplicación web moderna y minimalista que permite consultar el estado del ti
 *​🖼️ Iconos dinámicos: Los iconos cambian según el estado del cielo (soleado, nublado, lluvia, etc.).
 
 *​📱 Responsive Design: Optimizado para dispositivos móviles y escritorio.
+
 npm install lucide-react
 
