@@ -20,4 +20,4 @@ http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=61eb4276c68253f7
 
 http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=61eb4276c68253f71847f445b5efab7c
 
-http://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}?appid=61eb4276c68253f71847f445b5efab7c
+http://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}?appid=8d292860bbf48b031fc71f2c20bfa848
