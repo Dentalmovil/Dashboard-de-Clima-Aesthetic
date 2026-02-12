@@ -26,5 +26,5 @@ Una aplicación web moderna y minimalista que permite consultar el estado del ti
    git clone [https://github.com/tu-usuario/nombre-del-repo.git](https://github.com/tu-usuario/nombre-del-repo.git)
 npm install  # O el comando que corresponda a tu lenguaje
 npm start
-git clone https://github.com/tu-usuario/tu-proyecto-clima.git
+git clone https://github.com/tu-dentalmovil/tu-proyecto-clima.git
 
