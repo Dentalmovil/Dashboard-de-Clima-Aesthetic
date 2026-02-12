@@ -15,16 +15,3 @@ Una aplicación web moderna y minimalista que permite consultar el estado del ti
 
 *​📱 Responsive Design: Optimizado para dispositivos móviles y escritorio.
 
-## 📸 Demo (Opcional)
-![Texto alternativo de la imagen](enlace-a-tu-captura-de-pantalla.png)
-> *Tip: Si no tienes una imagen, puedes poner un GIF del funcionamiento.*
-
-## 🚀 Instalación y uso
-
-1. **Clona el repositorio:**
-   ```bash
-   git clone [https://github.com/-dentalmovil/Dashboard-de-Clima-Aesthetic.git](https://github.com/-dentalmovil/Dasboard-de-Clima-Aesthetic.git)
-npm install  # O el comando que corresponda a tu lenguaje
-npm start
-git clone https://github.com/-dentalmovil/-Dasboard-de-clima-Aesthetic.git
-
