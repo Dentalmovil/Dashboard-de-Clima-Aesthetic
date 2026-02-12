@@ -74,3 +74,100 @@ export default function WeatherApp() {
     </div>
   );
 }
+import React, { useState } from 'react';
+import { Search, Cloud, Sun, CloudRain, CloudLightning, Snowflake, Wind, Droplets } from 'lucide-react';
+
+export default function WeatherApp() {
+  const [city, setCity] = useState("");
+  const [weather, setWeather] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const API_KEY = "TU_API_KEY_AQUI"; // RECUERDA PONER TU KEY
+
+  const fetchWeather = async (e) => {
+    e.preventDefault();
+    if (!city) return;
+    setLoading(true);
+    try {
+      const res = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}&lang=es`
+      );
+      const data = await res.json();
+      setWeather(data);
+    } catch (error) {
+      console.error("Error", error);
+    }
+    setLoading(false);
+  };
+
+  // Función para obtener el icono según el clima
+  const getWeatherIcon = (main) => {
+    switch (main) {
+      case 'Clear': return <Sun size={80} className="text-yellow-300 animate-spin-slow" />;
+      case 'Clouds': return <Cloud size={80} className="text-gray-200 animate-bounce" />;
+      case 'Rain': return <CloudRain size={80} className="text-blue-300" />;
+      case 'Thunderstorm': return <CloudLightning size={80} className="text-purple-400" />;
+      case 'Snow': return <Snowflake size={80} className="text-white" />;
+      default: return <Cloud size={80} className="text-white" />;
+    }
+  };
+
+  const getBackground = () => {
+    if (!weather) return "from-slate-800 to-slate-950";
+    const temp = weather.main.temp;
+    if (temp > 25) return "from-orange-500 via-red-500 to-pink-500";
+    if (temp < 15) return "from-cyan-500 via-blue-600 to-indigo-800";
+    return "from-emerald-400 to-cyan-600";
+  };
+
+  return (
+    <div className={`min-h-screen flex items-center justify-center bg-gradient-to-br ${getBackground()} p-6 transition-all duration-1000 font-sans`}>
+      <div className="w-full max-w-md bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2rem] p-8 shadow-2xl text-white">
+        
+        {/* Input con Icono */}
+        <form onSubmit={fetchWeather} className="relative mb-10">
+          <input 
+            type="text" 
+            placeholder="Buscar ciudad..."
+            className="w-full bg-white/10 border border-white/20 py-4 px-6 pr-12 rounded-2xl outline-none focus:ring-2 focus:ring-white/50 transition-all placeholder:text-white/50"
+            onChange={(e) => setCity(e.target.value)}
+          />
+          <Search className="absolute right-4 top-4 text-white/50" />
+        </form>
+
+        {weather ? (
+          <div className="text-center animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="flex justify-center mb-6">
+              {getWeatherIcon(weather.weather[0].main)}
+            </div>
+            
+            <h1 className="text-6xl font-black mb-2">{Math.round(weather.main.temp)}°</h1>
+            <h2 className="text-2xl font-medium tracking-wide mb-8">{weather.name}</h2>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/5 rounded-2xl p-4 flex items-center gap-3">
+                <Droplets className="text-cyan-300" />
+                <div className="text-left">
+                  <p className="text-xs text-white/50 uppercase">Humedad</p>
+                  <p className="font-bold">{weather.main.humidity}%</p>
+                </div>
+              </div>
+              <div className="bg-white/5 rounded-2xl p-4 flex items-center gap-3">
+                <Wind className="text-teal-300" />
+                <div className="text-left">
+                  <p className="text-xs text-white/50 uppercase">Viento</p>
+                  <p className="font-bold">{weather.wind.speed} km/h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="text-center py-10 opacity-50">
+            <Sun size={48} className="mx-auto mb-4 animate-pulse" />
+            <p className="text-lg">Ingresa una ciudad para ver la magia</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
