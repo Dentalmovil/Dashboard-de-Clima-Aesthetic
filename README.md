@@ -23,8 +23,8 @@ Una aplicación web moderna y minimalista que permite consultar el estado del ti
 
 1. **Clona el repositorio:**
    ```bash
-   git clone [https://github.com/tu-dentalmovil/Dashboard-de-Clima-Aesthetic.git](https://github.com/tu-dentalmovil/Dasboard-de-Clima-Aesthetic.git)
+   git clone [https://github.com/-dentalmovil/Dashboard-de-Clima-Aesthetic.git](https://github.com/-dentalmovil/Dasboard-de-Clima-Aesthetic.git)
 npm install  # O el comando que corresponda a tu lenguaje
 npm start
-git clone https://github.com/tu-dentalmovil/tu-Dasboard-de-clima-Aesthetic.git
+git clone https://github.com/-dentalmovil/-Dasboard-de-clima-Aesthetic.git
 
