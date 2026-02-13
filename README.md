@@ -17,3 +17,4 @@ npm install lucide-react
 *​📱 Responsive Design: Optimizado para dispositivos móviles y escritorio.
 
 http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=61eb4276c68253f71847f445b5efab7c
+git clone https://github.com/tu-usuario/tu-proyecto-clima.git
