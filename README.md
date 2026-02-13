@@ -19,3 +19,6 @@ npm install lucide-react
 http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=61eb4276c68253f71847f445b5efab7c
 
 https://old.openweathermap.org/
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
