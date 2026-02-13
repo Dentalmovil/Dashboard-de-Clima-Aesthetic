@@ -179,3 +179,52 @@ Crear estructura inicial
     });
 </script>
 
+const soundElement = document.getElementById('weather-sound');
+
+// Diccionario de sonidos
+const weatherSounds = {
+    "Clear": "https://www.soundjay.com/nature/sounds/cricket-chirping-01.mp3", // Grillos/Noche despejada
+    "Rain": "https://www.soundjay.com/nature/sounds/rain-07.mp3",              // Lluvia
+    "Thunderstorm": "https://www.soundjay.com/nature/sounds/thunder-01.mp3",   // Trueno
+    "Clouds": "https://www.soundjay.com/nature/sounds/wind-01.mp3"            // Viento suave
+};
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const city = input.value;
+    if (!city) return;
+
+    try {
+        const res = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}&lang=es`
+        );
+        const data = await res.json();
+
+        if (data.cod === "404") {
+            alert("Ciudad no encontrada");
+            return;
+        }
+
+        const mainWeather = data.weather[0].main;
+        
+        // --- LÓGICA DE AUDIO ---
+        if (weatherSounds[mainWeather]) {
+            soundElement.src = weatherSounds[mainWeather];
+            soundElement.volume = 0.4; // Volumen suave
+            soundElement.play();
+        }
+
+        // Actualizar Icono
+        const icon = weatherIcons[mainWeather] || "🌡️";
+        
+        // Actualizar Interfaz
+        document.querySelector('.city').innerText = `${data.name}, ${data.sys.country}`;
+        document.querySelector('h1').innerText = `${icon} ${data.weather[0].description}`;
+        document.querySelector('.temp').innerText = `${Math.round(data.main.temp)}°C`;
+        
+        input.value = ""; 
+    } catch (error) {
+        console.error("Error", error);
+    }
+});
+
