@@ -114,3 +114,67 @@ Crear estructura inicial
 
 </body>
 </html>
+<script>
+    const API_KEY = "TU_API_KEY_AQUI"; // Asegúrate de poner tu llave aquí
+
+    const form = document.querySelector('form');
+    const input = document.querySelector('input');
+
+    // Diccionario de iconos según el clima
+    const weatherIcons = {
+        "Clear": "☀️",
+        "Clouds": "☁️",
+        "Rain": "🌧️",
+        "Drizzle": "🌦️",
+        "Thunderstorm": "⛈️",
+        "Snow": "❄️",
+        "Mist": "🌫️",
+        "Smoke": "🌫️",
+        "Haze": "🌫️",
+        "Dust": "🌫️",
+        "Fog": "🌫️"
+    };
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const city = input.value;
+        if (!city) return;
+
+        try {
+            const res = await fetch(
+                `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}&lang=es`
+            );
+            const data = await res.json();
+
+            if (data.cod === "404") {
+                alert("Ciudad no encontrada");
+                return;
+            }
+
+            // 1. Cambiar el Icono dinámicamente
+            const mainWeather = data.weather[0].main;
+            const icon = weatherIcons[mainWeather] || "🌡️";
+            
+            // 2. Cambiar el color del fondo según la temperatura
+            const temp = Math.round(data.main.temp);
+            if (temp > 28) {
+                document.body.style.background = "linear-gradient(-45deg, #ff512f, #f09819)"; // Cálido
+            } else if (temp < 15) {
+                document.body.style.background = "linear-gradient(-45deg, #2980b9, #6dd5fa)"; // Frío
+            } else {
+                document.body.style.background = "linear-gradient(-45deg, #11998e, #38ef7d)"; // Templado
+            }
+
+            // 3. Actualizar la interfaz
+            document.querySelector('.city').innerText = `${data.name}, ${data.sys.country}`;
+            document.querySelector('h1').innerText = `${icon} ${data.weather[0].description}`;
+            document.querySelector('.temp').innerText = `${temp}°C`;
+            document.querySelector('p').innerText = `Humedad: ${data.main.humidity}%`;
+            
+            input.value = ""; 
+        } catch (error) {
+            console.error("Error al obtener el clima", error);
+        }
+    });
+</script>
+
