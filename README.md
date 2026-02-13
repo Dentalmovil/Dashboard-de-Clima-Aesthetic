@@ -1,7 +1,4 @@
-# 🚀 [Nombre de tu Proyecto]
-
-
- ##🚀 [Dasboard-de-Clima-Aesthetic]
+# 🚀 [Dashboard-de-Clima-Aesthetic]
 
 Una aplicación web moderna y minimalista que permite consultar el estado del tiempo en cualquier ciudad del mundo en tiempo real. El proyecto consume datos de una API externa para mostrar temperatura, humedad y condiciones atmosféricas.
 
