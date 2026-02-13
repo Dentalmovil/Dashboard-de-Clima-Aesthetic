@@ -1,3 +1,9 @@
+git init
+git add .
+git commit -m "Mi primer commit"
+git branch -M main
+git remote add origin https://github.com/tu-usuario/tu-proyecto.git
+git push -u origin main
  ##🚀 [Dasboard-de-Clima-Aesthetic]
 
 Una aplicación web moderna y minimalista que permite consultar el estado del tiempo en cualquier ciudad del mundo en tiempo real. El proyecto consume datos de una API externa para mostrar temperatura, humedad y condiciones atmosféricas.
