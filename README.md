@@ -20,3 +20,4 @@ http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=61eb4276c68253f7
 
 git clone https://github.com/tu-usuario/tu-proyecto-clima.git
 https://dentalmovil.github.io/tu-repositorio/
+https://old.openweathermap.org/
