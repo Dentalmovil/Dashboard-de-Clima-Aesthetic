@@ -126,7 +126,23 @@ Crear estructura inicial
 
 </body>
 </html>
-<script>
+<script>const nightToggle = document.getElementById('night-mode-toggle');
+
+// Función para cambiar el modo
+const toggleNightMode = () => {
+    document.body.classList.toggle('night-mode');
+    nightToggle.innerText = document.body.classList.contains('night-mode') ? "☀️" : "🌙";
+};
+
+nightToggle.addEventListener('click', toggleNightMode);
+
+// Auto-activación por horario (Opcional)
+const hour = new Date().getHours();
+if (hour >= 19 || hour <= 6) {
+    document.body.classList.add('night-mode');
+    nightToggle.innerText = "☀️";
+}
+
     const API_KEY = "8d292860bbf48b031fc71f2c20bfa848"; // Asegúrate de poner tu llave aquí
 
     const form = document.querySelector('form');
