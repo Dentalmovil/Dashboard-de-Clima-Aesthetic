@@ -1,3 +1,30 @@
+# 🌤️ Dashboard de Clima Aesthetic
+
+¡Bienvenido a mi Dashboard de Clima! Este es un proyecto interactivo desarrollado con **HTML, CSS y JavaScript**, diseñado con una estética moderna tipo *Glassmorphism*.
+
+👉 **[Ver el proyecto en vivo aquí](https://dentalmovil.github.io/Dashboard-de-Clima-Aesthetic/)**
+
+## ✨ Características Principales
+* **Diseño Aesthetic:** Interfaz con efectos de cristal y desenfoque (Backdrop-filter).
+* **Fondo Dinámico:** Los colores cambian automáticamente según la temperatura de la ciudad consultada.
+* **Sonidos Ambientales:** Activa sonidos de lluvia, viento o naturaleza dependiendo del clima.
+* **Modo Noche Inteligente:** Se activa automáticamente según la hora local o mediante un interruptor manual.
+* **Iconos Adaptativos:** Emojis que cambian según si el cielo está despejado, nublado o con tormenta.
+
+## 🛠️ Tecnologías Usadas
+* **JavaScript (ES6+):** Para la lógica de fetch y manipulación del DOM.
+* **OpenWeatherMap API:** Para obtener datos meteorológicos en tiempo real.
+* **CSS3:** Animaciones de gradientes y efectos de vidrio.
+
+## 🚀 Cómo usarlo
+1. Ingresa el nombre de una ciudad en el buscador.
+2. Presiona "Enter".
+3. ¡Disfruta de la atmósfera sonora y visual de la ciudad seleccionada!
+
+---
+Hecho con ❤️ por [Dentalmovil](https://github.com/Dentalmovil)
+
+
 # 🚀 [Dashboard-de-Clima-Aesthetic]
 
 Una aplicación web moderna y minimalista que permite consultar el estado del tiempo en cualquier ciudad del mundo en tiempo real. El proyecto consume datos de una API externa para mostrar temperatura, humedad y condiciones atmosféricas.
