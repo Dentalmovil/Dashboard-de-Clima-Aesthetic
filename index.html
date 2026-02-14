@@ -17,7 +17,16 @@ Crear estructura inicial
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima Aesthetic ☁️</title>
-    <style>
+    <style>body.night-mode {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e) !important;
+    background-size: 400% 400% !important;
+}
+
+.night-mode .glass-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
         body { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; color: #333; }
         .card { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); padding: 2rem; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); text-align: center; border: 1px solid rgba(255,255,255,0.3); }
         h1 { margin: 0; font-size: 2rem; }
