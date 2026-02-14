@@ -171,4 +171,3 @@ export default function WeatherApp() {
     </div>
   );
 }
-gh repo clone Dentalmovil/Dentalmovil.github.io
