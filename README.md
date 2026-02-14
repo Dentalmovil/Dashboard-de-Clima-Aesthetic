@@ -29,4 +29,3 @@ http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=61eb4276c68253f7
 https://old.openweathermap.org/
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-gh repo clone Dentalmovil/Dentalmovil.github.io
