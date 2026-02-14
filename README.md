@@ -2,7 +2,7 @@
 
 ¡Bienvenido a mi Dashboard de Clima! Este es un proyecto interactivo desarrollado con **HTML, CSS y JavaScript**, diseñado con una estética moderna tipo *Glassmorphism*.
 
-👉 **[Ver el proyecto en vivo aquí]( https://github.com/Dentalmovil/Dentalmovil.github.io.git)**
+👉 **[Ver el proyecto en vivo aquí](https://dentalmovil.github.io/Dashboard-de-Clima-Aesthetic/)**
 
 ## ✨ Características Principales
 * **Diseño Aesthetic:** Interfaz con efectos de cristal y desenfoque (Backdrop-filter).
