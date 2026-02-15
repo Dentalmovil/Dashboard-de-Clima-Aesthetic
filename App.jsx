@@ -275,5 +275,22 @@ export default function App() {
     </div>
   );
 }
+// ... dentro de tu componente ...
+const [history, setHistory] = useState([]);
+
+// Cargar historial al inicio
+useEffect(() => {
+  const savedHistory = JSON.parse(localStorage.getItem('weatherHistory')) || [];
+  setHistory(savedHistory);
+}, []);
+
+// Función para añadir al historial (llámala dentro de fetchWeather)
+const addToHistory = (cityName) => {
+  if (!history.includes(cityName)) {
+    const newHistory = [cityName, ...history].slice(0, 3); // Guardamos solo las últimas 3
+    setHistory(newHistory);
+    localStorage.setItem('weatherHistory', JSON.stringify(newHistory));
+  }
+};
 
 
