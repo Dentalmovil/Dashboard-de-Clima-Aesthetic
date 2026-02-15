@@ -236,4 +236,44 @@ export default function App() {
     </div>
   );
 }
+import React, { useState, useEffect } from 'react';
+import { auth, provider } from "./firebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
+import { Loader2 } from 'lucide-react'; // Icono de carga
+
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true); // Nuevo: Estado de carga inicial
+
+  useEffect(() => {
+    // onAuthStateChanged nos dice si hay un usuario activo
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false); // Una vez que Firebase responde, dejamos de cargar
+    });
+    return () => unsubscribe();
+  }, []);
+
+  // 2. Pantalla de Carga Estilizada
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-white">
+        <Loader2 className="w-12 h-12 text-blue-500 animate-spin mb-4" />
+        <p className="text-lg font-medium animate-pulse">Verificando sesión...</p>
+      </div>
+    );
+  }
+
+  // 3. Lógica normal (Login o Dashboard)
+  return (
+    <div className="min-h-screen bg-slate-900 text-white">
+      {user ? (
+        <Dashboard user={user} /> // Tu componente de Clima
+      ) : (
+        <LoginScreen /> // Tu componente de Login
+      )}
+    </div>
+  );
+}
+
 
